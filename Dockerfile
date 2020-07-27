@@ -34,7 +34,7 @@ RUN echo '   server = /home/pwn01/hi' >> pwn1
 RUN echo '}' >> pwn1
 
 WORKDIR /etc
-RUN echo "pwn1         20101/tcp" >> services
+RUN echo "pwn1         20201/tcp" >> services
 
 WORKDIR /usr/local/bin
 RUN touch start.bash
