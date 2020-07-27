@@ -36,10 +36,4 @@ RUN echo '}' >> pwn1
 WORKDIR /etc
 RUN echo "pwn1         20201/tcp" >> services
 
-WORKDIR /usr/local/bin
-RUN touch start.bash
-RUN echo '#!/bin/bash' >> start.bash
-RUN echo 'echo "hi"' >> start.bash
-RUN chmod 4755 start.bash
-
 WORKDIR /home/pwn01
