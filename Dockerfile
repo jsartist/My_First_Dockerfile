@@ -21,20 +21,20 @@ RUN chown root hi
 RUN chgrp pwn01 hi
 
 WORKDIR /etc/xinetd.d
-RUN touch pwn01
-RUN echo 'service sys01' >> pwn01
-RUN echo '{' >> pwn01
-RUN echo '   disable = no' >> pwn01
-RUN echo '   flags = REUSE' >> pwn01
-RUN echo '   socket_type = stream' >> pwn01
-RUN echo '   protocol = tcp' >> pwn01
-RUN echo '   wait = no' >> pwn01
-RUN echo '   user = pwn01' >> pwn01
-RUN echo '   server = /home/pwn01/hi' >> pwn01
-RUN echo '}' >> pwn01
+RUN touch pwn1
+RUN echo 'service pwn1' >> pwn1
+RUN echo '{' >> pwn1
+RUN echo '   disable = no' >> pwn1
+RUN echo '   flags = REUSE' >> pwn1
+RUN echo '   socket_type = stream' >> pwn1
+RUN echo '   protocol = tcp' >> pwn1
+RUN echo '   wait = no' >> pwn1
+RUN echo '   user = pwn01' >> pwn1
+RUN echo '   server = /home/pwn01/hi' >> pwn1
+RUN echo '}' >> pwn1
 
 WORKDIR /etc
-RUN echo "sys01         20101/tcp" >> services
+RUN echo "pwn1         20101/tcp" >> services
 
 WORKDIR /usr/local/bin
 RUN touch start.bash
