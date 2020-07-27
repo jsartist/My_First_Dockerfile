@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+   hello:
+      build: ./
+      ports:
+        - "30003:20101"
+
+      stdin_open: true
+      tty: true
